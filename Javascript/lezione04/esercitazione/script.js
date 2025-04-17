@@ -27,6 +27,8 @@ let sendExam = document.getElementById("sendExam").addEventListener("click",func
             }else{
                 esamePierpier.innerHTML = "Congratulazioni, hai superato l'esame! Il voto è: " + esamePierpierOrale;
             }
+        }else{
+            esamePierpier.innerHTML = "Mi dispiace, non hai superato il mio esame";
         }
     }
 })
