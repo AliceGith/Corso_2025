@@ -1,0 +1,59 @@
+body {
+    font-family: "Roboto", sans-serif;
+    }
+
+    
+.percentuale {
+    background-color: #f0f33a;
+    width: 50%;
+}
+
+.figlio-di-percentuale {
+    background-color: blue;
+    color: white;
+    width: 50%;
+}
+
+.figlio-di-percentuale2 {
+    background-color: green;
+    color: white;
+    width: 205%;
+}
+
+.full-height {
+    background-color: coral;
+    height: 100vh;
+}
+
+.full-width {
+    background-color: black;
+    color: white;
+    width: 100vw;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+p {
+    margin-top: 0;
+}
+
+.subtitle {
+    font-size: 0.5em /* la metà del font-size del genitore*/;
+}
+
+.image-centered {
+    display: block;
+    margin: auto;
+}
+
+.image-left {
+    float: left;
+    margin-right: 1rem;
+}
+
+.image-right {
+    float: right;
+}

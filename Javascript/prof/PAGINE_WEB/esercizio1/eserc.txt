@@ -1,0 +1,13 @@
+Crea una pagina web semplice con un titolo "Esercizio" e un paragrafo Lorem di 50 parole.
+
+Quando l'utente entra nella pagina compare un prompt in cui gli viene chiesto il nome e il cognome.
+
+Nome e cognome verranno stampati in un h2 sotto il paragrafo.
+
+Chiedi poi all'utente di fornirti due numeri. Stampa i numeri in un tag <p> nel seguente modo:
+
+<p>
+    num1: 10
+    num2: 12
+    Somma: 22
+</p>

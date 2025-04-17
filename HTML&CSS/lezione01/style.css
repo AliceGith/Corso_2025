@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+a {
+    color: yellow;
+}
+
+ul a {
+    font-weight: bold;
+}

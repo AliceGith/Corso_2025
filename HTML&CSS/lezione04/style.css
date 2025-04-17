@@ -1,0 +1,65 @@
+.parent {
+    border: 1px solid black;
+    font-size: 3rem;
+    display: flex;
+
+    height: 50vh;
+
+    /* non usare left-right ma start-end */
+    /* justify-content: flex-end;  */
+    /* justify-content: center; */
+    /* justify-content: space-evenly; */
+    /* justify-content: space-between; */
+    justify-content: space-around;
+
+    /* questo è il default */
+    /* align-items: stretch; */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    align-items: center;
+}
+
+.child {
+    background-color: chartreuse;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 25%;
+}
+
+.gallery-item img {
+    /* adatta l'immagine al suo contenitore se è più grande*/
+    max-width: 100%;
+    /* se l'immagine è leggermente più piccola e voglio stretcharla uso width:100% */
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    width: 66.66%;
+}
+
+.image {
+    width: 33.33%;
+}
+
+.image img {
+    max-width: 100%;
+}
+
+ul.menu {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    /* justify-content: space-around; */
+    list-style-type: none;
+}
