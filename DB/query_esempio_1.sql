@@ -1,0 +1,46 @@
+CREATE TABLE esempio (
+	a INT,
+	b VARCHAR(50)
+)
+
+ALTER TABLE esempio ADD c CHAR(50);
+ALTER TABLE esempio CHANGE c x CHAR(50);
+ALTER TABLE esempio MODIFY COLUMN x VARCHAR(50);
+ALTER TABLE esempio DROP COLUMN X;
+RENAME TABLE esempio TO prova;
+DROP TABLE prova;
+
+CREATE TABLE IMPIEGATO(
+	ID INT NOT NULL,
+	NOME VARCHAR(50) NOT NULL,
+	DATA_ASSUNZIONE DATE NOT NULL
+);
+
+ALTER TABLE IMPIEGATO MODIFY COLUMN DATA_ASSUNZIONE DATE NULL;
+ALTER TABLE impiegato MODIFY COLUMN DATA_ASSUNZIONE DATE NOT NULL;
+
+ALTER TABLE impiegato ADD email VARCHAR(50);
+ALTER TABLE impiegato ADD CONSTRAINT email_uq UNIQUE(email);
+
+ALTER TABLE impiegato ADD Telefono VARCHAR(50);
+ALTER TABLE impiegato MODIFY COLUMN Telefono VARCHAR(50) NOT NULL;
+ALTER TABLE impiegato ADD CONSTRAINT telefono_uq UNIQUE(Telefono);
+
+ALTER TABLE impiegato ADD eta INT;
+ALTER TABLE impiegato ADD CONSTRAINT ck_eta CHECK(eta>=18);
+
+ALTER TABLE impiegato ADD CONSTRAINT ck_nome CHECK(LENGTH(nome>2));
+
+ALTER TABLE impiegato MODIFY COLUMN id INT AUTO_INCREMENT PRIMARY KEY;
+
+CREATE TABLE dipartimento(
+	id_dipartimento INT,
+	nome VARCHAR(50)
+);
+
+ALTER TABLE dipartimento MODIFY COLUMN id_dipartimento INT NOT NULL;
+ALTER TABLE dipartimento ADD CONSTRAINT pk_id_dipartimento PRIMARY KEY(id_dipartimento);
+ALTER TABLE dipartimento MODIFY COLUMN id_dipartimento INT AUTO_INCREMENT;
+
+ALTER TABLE impiegato ADD id_dipartimento INT;
+ALTER TABLE impiegato ADD CONSTRAINT fk_id_dipartimento FOREIGN KEY(id_dipartimento) REFERENCES dipartimento(id_dipartimento) ON DELETE SET NULL;
