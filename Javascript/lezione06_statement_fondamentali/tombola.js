@@ -9,6 +9,7 @@
 
 let estrazioneFor = document.getElementById("estrazioneFor");
 let estrazioneWhile = document.getElementById("estrazioneWhile");
+let estrazioneFor2 = document.getElementById("estrazioneFor2");
 let estrazioneProfio = document.getElementById("estrazioneProfio");
 
 // soluzione uno
@@ -21,8 +22,8 @@ for(let i = 0; i < 10; i++){
         i--;
     }else{
         numeriEstratti1.push(numEstratto1);
+        estrazioneFor.innerHTML += " " + numeriEstratti1[i];
     }
-    estrazioneFor.innerHTML += " " + numeriEstratti1[i];
 }
 
 // soluzione due
@@ -39,25 +40,26 @@ estrazioneWhile.innerHTML += " " + numeriEstratti2.join(' ');
 
 // soluzione 3
 
+// let numeriEstratti3 = [];
+
+// for(i = 0; i < 10; i++){
+//     for(i = 0; numeriEstratti3.length < 10; i++){
+
+//     }
+//     let numEstratto3 = "";
+// }
+
 // soluzione 4
 
-// let numeriEstratti3 = [];
-// let numeriProfio = [];
+let numeriEstratti4 = [];
+let numeriProfio = [];
 
-// for(i = 0; i < 90; i++){
-//     numeriProfio[i] = i+1;
-// }
-// for(i = 0; i < 10; i++){
-//     randomIndex = Math.floor(Math.random() * 90)
-    let numEstratto = numeriProfio.splice(randomIndex,1);
-    numeriEstratti3.push(numeriProfio[numEstratto])
-// }
-// estrazioneProfio.innerHTML += " " + numeriEstratti3.join(' ');
-
-// console.log(numeriEstratti3.length);
-// sto pushando l'indice invece del numero
-
-let arr = [1,2,3,4,5];
-console.log(arr.splice(2,1));
-console.log(arr);
-
+for(i = 0; i < 90; i++){
+    numeriProfio[i] = i+1;
+}
+for(i = 0; numeriEstratti4.length < 10; i++){
+    let randomIndex = Math.floor(Math.random() * numeriProfio.length);
+    let numEstratto4 = numeriProfio.splice(randomIndex,1)[0];
+    numeriEstratti4.push(numEstratto4);
+}
+estrazioneProfio.innerHTML += " " + numeriEstratti4.join(' ');
