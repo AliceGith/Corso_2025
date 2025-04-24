@@ -40,14 +40,20 @@ estrazioneWhile.innerHTML += " " + numeriEstratti2.join(' ');
 
 // soluzione 3
 
-// let numeriEstratti3 = [];
+let numeriEstratti3 = [];
+let giri = 0;
 
-// for(i = 0; i < 10; i++){
-//     for(i = 0; numeriEstratti3.length < 10; i++){
+for(i = 0; i < 10; i++){
+    let numEstratto3 = Math.ceil(Math.random() * 90);
+    for(let j = 0; j < numeriEstratti3.length; j++){
+        if(numeriEstratti3[j] == numEstratto3){
+            continue;
+        }
+    }
+    numeriEstratti3.push(numEstratto3);
+}
 
-//     }
-//     let numEstratto3 = "";
-// }
+estrazioneFor2.innerHTML += " " + numeriEstratti3.join(' ');
 
 // soluzione 4
 
