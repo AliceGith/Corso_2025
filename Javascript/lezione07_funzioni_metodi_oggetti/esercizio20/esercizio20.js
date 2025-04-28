@@ -299,7 +299,9 @@ btnEsercizio10.addEventListener("click", esercizio10);
 let array = []
 let arraycheck = []
 for(let i = 0; i < array; i++){
-    if(arraycheck[i] == array[i]){
+    foreach(arraycheck){
+    if(element == array[i]){
         array.splice[i, 1];
+    }
     }
 }
