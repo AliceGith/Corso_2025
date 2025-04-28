@@ -296,3 +296,10 @@ btnEsercizio10.addEventListener("click", esercizio10);
 
 // esercizio 11
 
+let array = []
+let arraycheck = []
+for(let i = 0; i < array; i++){
+    if(arraycheck[i] == array[i]){
+        array.splice[i, 1];
+    }
+}
