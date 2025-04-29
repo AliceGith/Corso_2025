@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Esame Universitario</h1>
+
+    <form>
+        <label for="esameProfioScritto">Esame Scritto Profio</label>
+        <input type="number" id="esameProfioScritto" name="esameProfioScritto"><br><br>
+        <label for="esameProfioOrale">Esame Orale Profio</label>
+        <input type="number" id="esameProfioOrale" name="esameProfioOrale"><br><br>
+        <label for="esamePierpierScritto">Esame Scritto Pierpier</label>
+        <input type="number" id="esamePierpierScritto" name="esamePierpierScritto"><br><br>
+        <label for="esameProfioPierpier">Esame Orale Pierpier</label>
+        <input type="number" id="esamePierpierOrale" name="esamePierpierOrale"><br><br>
+        <input type="submit" value="Submit" id="sendExam">
+    </form>
+    
+    <p>Esame 1 - Professor Profio: per superare il mio esame devi avere superato sia lo scritto che l'orale. Il voto finale sarà la media dei due. Il voto deve essere maggiore di 18.</p>
+
+    <p id="esameProfio"></p>
+
+    <p>Esame 2 - Professor Pierpier: per superare il mio esame basta superare uno tra lo scritto e l'orale. Il voto finale sarà il maggiore tra i due.</p>
+
+    <p id="esamePierpier"></p>
+
+    <script src="./script.js"></script>
+</body>
+</html>
