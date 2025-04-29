@@ -54,8 +54,10 @@ for(let i = 1; i <= 100; i++){
         textEsercizio3 = i + " - Bangarang ";
     }else if(i % 3 == 0){
         textEsercizio3 = i + " - Zoom ";
-    }else{
+    }else if(i% 5 == 0){
         textEsercizio3 = i + " - Boom ";
+    }else{
+        textEsercizio3 = i;
     }
     outputEsercizio3 += `<div>${textEsercizio3}</div>`;
 }
@@ -296,12 +298,12 @@ btnEsercizio10.addEventListener("click", esercizio10);
 
 // esercizio 11
 
-let array = []
-let arraycheck = []
-for(let i = 0; i < array; i++){
-    foreach(arraycheck){
-    if(element == array[i]){
-        array.splice[i, 1];
-    }
-    }
-}
+// let array = []
+// let arraycheck = []
+// for(let i = 0; i < array; i++){
+//     foreach(arraycheck){
+//     if(element == array[i]){
+//         array.splice[i, 1];
+//     }
+//     }
+// }
