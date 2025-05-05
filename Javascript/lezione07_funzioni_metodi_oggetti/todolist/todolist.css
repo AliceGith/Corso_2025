@@ -1,0 +1,84 @@
+.rouge-script-regular {
+    font-family: "Rouge Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titolo {
+    font-family: "Rouge Script";
+    font-size: 3rem;
+}
+
+#stampaOrologio {
+    font-size: 2rem;
+}
+
+.attivitaWrapper {
+    display: flex;
+    margin-top: 2rem;
+}
+
+#attivitaDaFareWrapper {
+    display: flex;
+    justify-content: space-between;
+    color: blue;
+}
+
+#attivitaFatteWrapper {
+    display: flex;
+    justify-content: space-between;
+    color: green;
+}
+
+#attivitaCancellateWrapper {
+    display: flex;
+    justify-content: space-between;
+    color: red;
+}
+
+#attivitaCancellateStampa {
+    text-decoration: line-through;
+}
+
+.checkList {
+    width: 33%;
+    height: 50vh;
+    /* border: 1px solid gray; */
+    overflow-x: scroll;
+    overflow-y: scroll;
+    /* position: relative; */
+    padding: 1rem 1rem;
+}
+
+.listBlu {
+    border: 1px solid blue;
+}
+
+.listVerde {
+    border: 1px solid green;
+}
+
+.listRossa {
+    border: 1px solid red;
+}
+
+li {
+    white-space: nowrap;
+}
+
+.btnFatto, .btnCancellato, .btnCancellato-fatte, .btnCancellaDaFare {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

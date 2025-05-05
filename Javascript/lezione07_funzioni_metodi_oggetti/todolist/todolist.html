@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="todolist.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="header">
+            <h1 class="titolo">To Do List</h1>
+            <p id="stampaOrologio"></p>
+        </div>
+
+        <hr>
+
+        <input type="text" id="input" placeholder="Inserisci un'attività">
+        <button id="inserisciAttivita">Aggiungi</button>
+
+        <div class="attivitaWrapper">
+            <div id="attivitaDaFare" class="checkList listBlu">
+                <div id="attivitaDaFareWrapper">
+                    <span>Da fare</span>
+                    <button class="svuota" id="svuotaAttivita">Svuota</button>
+                </div>
+                <hr>
+                <div id="attivitaDaFareStampa"></div>
+            </div>
+
+            <div id="attivitaFatte" class="checkList listVerde">
+                <div id="attivitaFatteWrapper">
+                    <span>Fatte</span>
+                    <button class="svuota" id="svuotaAttivitaFatte">Svuota</button>
+                </div>
+                <hr>
+                <div id="attivitaFatteStampa"></div>
+            </div>
+
+            <div id="attivitaCancellate" class="checkList listRossa">
+                <div id="attivitaCancellateWrapper">
+                    <span>Cancellate</span>
+                    <button class="svuota" id="svuotaAttivitaCancellate">Svuota</button>
+                </div>
+                <hr>
+                <div id="attivitaCancellateStampa"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="./todolist.js"></script>
+</body>
+</html>
