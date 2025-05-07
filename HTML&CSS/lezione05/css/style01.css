@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    text-shadow: 2px 2px 5px white;
+}
+
+@media screen and (min-width: 600px) {
+    
+    body {
+        background-color: rgb(101, 18, 18);
+    }
+
+    h1 {
+        color: yellow;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    
+    h1 {
+        text-align: center;
+        color: blue;
+    }
+
+}
+
+@media screen and (orientation: portrait) {
+    body {
+        background-color: fuchsia;
+    }
+}
