@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-    Elabora un array di film con le seguenti proprieta (titolo, regista, anno, genere, locandina)
+    <!-- Elabora un array di film con le seguenti proprieta (titolo, regista, anno, genere, locandina)
     Stampa in delle card tutti i film e crea un filtro sul genere.
     Trasforma tutto in un JSON e stampalo al fondo della pagina cliccando su un pulsante.
     OPZIONALE
@@ -19,13 +20,32 @@
     <p>Regista: Francis Ford Coppola</p>
     <ul>
         Attori:
-        <li>Marlon Brando</li>
-        <li>Martin Sheen</li>
-    </ul>
+        <li>Marlon Brando</li> -->
+        <!-- <li>Martin Sheen</li> -->
+    <!-- </ul> -->
 
-    <button>Indietro</button><button>Avanti</button>
+    <h1>Immaginazione e Cinema</h1>
 
-    <div id="demo"></div>
+    <p>Scegli il genere</p>
+    <select name="" id="genereSel">
+        <option value="Tutti">Tutti</option>
+        <option value="Fantascienza">Fantascienza</option>
+        <option value="Commedia">Commedia</option>
+        <option value="Horror">Horror</option>
+    </select>
+    <button id="btnSel">Seleziona</button>
+
+    <div id="boxFilms"></div>
+    
+    <div class="clear"></div>
+    
+    <button id="btnJSON">Stampa JSON</button>
+    <div id="boxJSON"></div>
+
+    <h1>Carosello</h1>
+    <div id="boxCarosello"></div>
+
+    <button id="btnIndietro">Indietro</button><button id="btnAvanti">Avanti</button>
 
     <script src="script.js"></script>
 </body>
