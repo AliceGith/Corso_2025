@@ -1,0 +1,332 @@
+* {
+    box-sizing: border-box;
+    font-family: "Dosis", sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: rgb(7, 110, 196);
+}
+
+.container {
+    width: 94%;
+    margin: auto;
+}
+
+.hero-wrapper {
+    background-color: rgb(7, 110, 196);
+}
+
+.header-logo img {
+    width: 8rem;
+    height: 2rem;
+    margin-top: 1.5rem;
+}
+
+.nav-wrapper {
+    display: none;
+}
+
+.hero {
+    margin-top: 5rem;
+}
+
+.hero-img img {
+    display: none;
+}
+
+.hero-text, .hero-text h1, .hero-text h2 {
+    color: white;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.hero-text h2 {
+    margin-top: 1rem;
+}
+
+.hero-text p {
+    margin-top: 1rem;
+    opacity: 0.8;
+}
+
+.btn-hero {
+    margin-top: 2.5rem;
+    color: white;
+    background-color: orangered;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 8rem;
+}
+
+.event-wrapper {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.event-wrapper h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.event-card {
+    margin-bottom: 5rem;
+}
+
+.event-icon {
+    color: blue;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.event-icon i {
+    font-size: 5rem;
+}
+
+.event-card h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.event-card p {
+    font-weight: 500;
+}
+
+.speakers-wrapper h2 {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.speaker-card {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.speaker-img img {
+    width: 6rem;
+    border-radius: 50%;
+    border: 2px solid #e0e0e0;
+}
+
+.speaker-card h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.speaker-icons {
+    color: blue;
+    margin-top: 1rem;
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.tickets-wrapper {
+    background-color: rgb(252, 217, 59);
+    text-align: center;
+    padding: 2rem;
+}
+
+.tickets-title {
+    font-weight: 500;
+}
+
+.ticket-card h2 {
+    font-weight: 200;
+    margin-top: 1rem;
+}
+
+.ticket-card h3 {
+    color: red;
+    font-size: 4rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+}
+
+.btn-tickets {
+    background-color: red;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.footer-socials {
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+
+.footer-socials .container {
+    width: 85%;
+}
+
+.contact-wrapper h3 {
+    text-align: center;
+    padding-top: 2rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.label-wrapper {
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.label-wrapper label {
+    margin-bottom: 2rem;
+}
+
+.label-wrapper input {
+    width: 100%;
+    border-radius: 4px;
+    border: 0;
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+.label-msg {
+    height: 7rem;
+}
+
+.btn-contact-wrapper {
+    text-align: end;
+}
+
+.btn-contact {
+    color: black;
+    background-color: rgb(252, 217, 59);
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+.feed-wrapper {
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+.feed-wrapper h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.twitter-feed {
+    color: rgb(66, 110, 149);
+    font-weight: 500;
+}
+
+.feed-wrapper hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.links-wrapper {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.links-wrapper a {
+    color: yellow;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 992px) {
+
+    .container {
+        width: 80%;
+    }
+
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-wrapper {
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .nav-wrapper a {
+        color: yellow;
+        text-decoration: none;
+        margin-left: 1rem;
+    }
+
+    .hero-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 6rem;
+    }
+
+    .hero-text {
+        text-align: start;
+        font-weight: 400;
+    }
+
+    .hero-text h2 {
+        text-align: start;
+    }
+
+    .hero-img img {
+        display: block;
+        height: 20rem;
+    }
+
+    .card-wrapper {
+        display: flex;
+    }
+
+    .speaker-wrapper {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding-bottom: 3rem;
+    }
+
+    .speaker-card {
+        width: 30%;
+        border: 0.5px solid rgb(237, 226, 226);
+        margin-bottom: 0;
+    }
+
+    .ticket-wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer-socials .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-wrapper {
+        width: 100%;
+    }
+}
