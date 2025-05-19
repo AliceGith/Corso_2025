@@ -308,12 +308,15 @@ header {
         flex-wrap: wrap;
         gap: 1rem;
         padding-bottom: 3rem;
+        margin: auto;
+        justify-content: center;
     }
 
     .speaker-card {
         width: 30%;
         border: 0.5px solid rgb(237, 226, 226);
         margin-bottom: 0;
+        padding: 2rem 0;
     }
 
     .ticket-wrapper {
@@ -326,7 +329,35 @@ header {
         justify-content: space-between;
     }
 
+    .contact-wrapper, .feed-wrapper {
+        width: 40%;
+    }
+
     .form-wrapper {
         width: 100%;
+    }
+
+    .label-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
+    .label-wrapper label {
+        text-align: end;
+        width: 30%;
+    }
+
+    .footer-socials {
+        padding-bottom: 2rem;
+    }
+
+    .footer-links .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -2rem;
+        padding-bottom: 1rem;
     }
 }
