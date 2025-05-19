@@ -1,0 +1,63 @@
+#demo {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#demo p {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    border: 1px solid black;
+    width: 380px;
+    padding: 0 1rem;
+    height: 561px;
+    word-wrap: break-word;
+}
+
+.card img {
+    max-width: 10rem;
+    max-height: 10rem;
+    margin-top: 1rem;
+}
+
+.card button {
+    margin-bottom: 1rem;
+}
+
+.card a {
+    margin-left: 5px;
+}
+
+.catchphrase {
+    font-style: italic;
+    margin-left: 5px;
+}
+
+.nascosto {
+    display: none;
+}
+
+.fbi {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 10rem;
+}
+
+.nino {
+    animation: nino 2s infinite alternate;
+}
+
+@keyframes nino {
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        background-color: red;
+    }
+}
