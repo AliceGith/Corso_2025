@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "first_name": "Dario",
+      "last_name": "Mennillo",
+      "email": "dario@mail.com",
+      "img": "./img/dario.jpg"
+    },
+    {
+      "id": "2",
+      "first_name": "Anna",
+      "last_name": "Rossi",
+      "email": "anna@mail.com",
+      "img": "./img/anna.jpg"
+    },
+    {
+      "id": "3",
+      "first_name": "Alice",
+      "last_name": "D'Alessandro",
+      "email": "alice@mail.com",
+      "img": "./img/alice.jpg"
+    },
+    {
+      "id": "4",
+      "first_name": "Car",
+      "last_name": "Lepori",
+      "email": "car@mail.com",
+      "img": "./img/car.jpg"
+    },
+    {
+      "id": "5",
+      "first_name": "Ty",
+      "last_name": "Veg",
+      "email": "ty@mail.com",
+      "img": "./img/ty.jpg"
+    },
+    {
+      "id": "6",
+      "first_name": "Paolo",
+      "last_name": "Rossi",
+      "email": "rossi@mail.com",
+      "img": "./img/vattelapesca.jpg"
+    }
+  ],
+  "author": "Programmer 1",
+  "corso": {
+    "nome": "Tecnico gestione siti web",
+    "scuola": "I&L"
+  }
+}
