@@ -1,0 +1,83 @@
+{
+    "giochi": [
+        {
+            "id": 1,
+            "titolo": "Fantasy Life i: La ragazza che ruba il tempo",
+            "prezzo": "€59.99",
+            "copertina": "./img/fantasy_life.jpg",
+            "generi": [
+                "Action",
+                "Role-Playing",
+                "Adventure"
+            ],
+            "data_uscita": "21 Maggio, 2025"
+        },
+        {
+            "id": 2,
+            "titolo": "Nier:Automata",
+            "prezzo": "€39.99",
+            "copertina": "./img/nier.jpg",
+            "generi": [
+                "Action",
+                "Role-Playing"
+            ],
+            "data_uscita": "06 Ottobre, 2022"
+        },
+        {
+            "id": 3,
+            "titolo": "Stardew Valley",
+            "prezzo": "€13.99",
+            "copertina": "./img/stardew.jpg",
+            "generi": [
+                "Role-Playing",
+                "Simulation"
+            ],
+            "data_uscita": "14 Dicembre, 2016"
+        },
+        {
+            "id": 4,
+            "titolo": "Hollow Knight",
+            "prezzo": "€14.99",
+            "copertina": "./img/hollow.jpg",
+            "generi": [
+                "Action",
+                "Adventure",
+                "Platformer"
+            ],
+            "data_uscita": "13 Giungo, 2018"
+        },
+        {
+            "id": 5,
+            "titolo": "Undertale",
+            "prezzo": "€14.99",
+            "copertina": "./img/undertale.jpg",
+            "generi": [
+                "Role-Playing"
+            ],
+            "data_uscita": "18 Settembre, 2018"
+        },
+        {
+            "id": 6,
+            "titolo": "Celeste",
+            "prezzo": "€19.99",
+            "copertina": "./img/celeste.jpg",
+            "generi": [
+                "Action",
+                "Platformer"
+            ],
+            "data_uscita": "25 Gennaio, 2018"
+        },
+        {
+            "id": 7,
+            "titolo": "OMORI",
+            "prezzo": "€24.99",
+            "copertina": "./img/omori.jpg",
+            "generi": [
+                "Role-Playing",
+                "Adventure",
+                "Horror"
+            ],
+            "data_uscita": "17 Giugno, 2022"
+        }
+    ]
+}
