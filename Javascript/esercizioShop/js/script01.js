@@ -10,38 +10,52 @@ function caricaGiochi(){
         listaGiochi = response;
         filtraByGenere(filtroSelezionato, listaGiochi).forEach(gioco => {
             stampaCard(gioco);
-        });        
+        });       
     })
 }
 
 function creaCard(gioco){
     let card = document.createElement("div");
+    card.classList.add("card");
 
-    let titolo = document.createElement("h2");
-    titolo.classList.add("titolo");
-    titolo.textContent = gioco.titolo;
-    card.appendChild(titolo);
+    let linkGioco = document.createElement("a");
+    linkGioco.setAttribute("href", "./pages/dettagli.html?id="+gioco.id);
+    linkGioco.textContent = gioco.titolo;
 
+    // let titolo = document.createElement("h3");
+    // titolo.classList.add("titolo");
+    // titolo.textContent = gioco.titolo;
+    
     let prezzo = document.createElement("p");
     prezzo.classList.add("prezzo");
     prezzo.textContent = gioco.prezzo;
-    card.appendChild(prezzo);
-
+    
     let copertina = document.createElement("img");
     copertina.classList.add("copertina");
     copertina.setAttribute("src", gioco.copertina);
+    
+    // let dataUscita = document.createElement("p");
+    // dataUscita.classList.add("dataUscita");
+    // dataUscita.textContent = gioco.data_uscita;
+
+    let btnAdd = document.createElement("button");
+    btnAdd.textContent = "Aggiungi al carrello";
+    btnAdd.addEventListener("click", ()=>{
+        carrello(gioco);
+    })
+    
     card.appendChild(copertina);
-
-    gioco.generi.forEach(genereGioco =>{
-        let genere = document.createElement("li");
-        genere.textContent = genereGioco;
-        card.appendChild(genere);
-    });
-
-    let dataUscita = document.createElement("p");
-    dataUscita.classList.add("dataUscita");
-    dataUscita.textContent = gioco.data_uscita;
-    card.appendChild(dataUscita);
+    card.appendChild(linkGioco);
+    // card.appendChild(titolo);
+    card.appendChild(prezzo);
+    // card.appendChild(dataUscita);
+    card.appendChild(btnAdd);
+    
+    // gioco.generi.forEach(genereGioco =>{
+    //     let genere = document.createElement("li");
+    //     genere.textContent = genereGioco;
+    //     card.appendChild(genere);
+    // });
 
     demo.appendChild(card);
 }
@@ -57,6 +71,22 @@ function filtraByGenere(genere, giochi){
         let giochiFiltrati = giochi.filter((listaGiochi) => listaGiochi.generi.includes(genere));        
         return giochiFiltrati;
     }
+}
+
+function carrello(gioco){    
+    let arrayCarrello = localStorage.getItem("listaCarrello");
+    let arrayCarrelloParsed;
+
+    if(arrayCarrello){
+        arrayCarrelloParsed = JSON.parse(arrayCarrello);
+    }else{
+        arrayCarrelloParsed = [];
+    }
+
+    arrayCarrelloParsed.push(gioco);
+    
+    let arrayCarrelloStringified = JSON.stringify(arrayCarrelloParsed);
+    localStorage.setItem("listaCarrello", arrayCarrelloStringified);
 }
 
 document.addEventListener("DOMContentLoaded", caricaGiochi);
