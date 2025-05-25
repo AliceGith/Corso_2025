@@ -43,7 +43,7 @@ function carrello(gioco){
         
         let prezzoNumerico = gioco.prezzo.replace("€", "");
         let prezzoNumericoNumber = parseFloat(prezzoNumerico);
-        totaleCarrello += parseFloat(prezzoNumericoNumber);
+        totaleCarrello += prezzoNumericoNumber;
         
     });
     let totaleDaStampare = document.createElement("p");
