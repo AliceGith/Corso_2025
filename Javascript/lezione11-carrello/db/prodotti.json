@@ -1,0 +1,100 @@
+{
+  "prodotti": [
+    {
+      "nome": "Smartphone Alpha",
+      "descrizione": "Display OLED, fotocamera 64MP, batteria a lunga durata.",
+      "prezzo": 599.99,
+      "immagine": "./img/smartphone.jpg",
+      "disponibilita": false
+    },
+    {
+      "nome": "Laptop Ultrabook",
+      "descrizione": "Leggero e potente, ideale per la produttività in movimento.",
+      "prezzo": 1099,
+      "immagine": "./img/laptop.jpg",
+      "disponibilita": true
+    },
+    {
+      "nome": "Cuffie Bluetooth X",
+      "descrizione": "Audio di alta qualità, comode da indossare, lunga autonomia.",
+      "prezzo": 129.5,
+      "immagine": "./img/cuffie.jpg",
+      "disponibilita": true
+    },
+    {
+      "nome": "Smartwatch Lite",
+      "descrizione": "Monitoraggio fitness, notifiche, design elegante.",
+      "prezzo": 199,
+      "immagine": "./img/smartwatch.jpg",
+      "disponibilita": true
+    },
+    {
+      "nome": "Tablet Pro",
+      "descrizione": "Ampio display, ideale per creatività e intrattenimento.",
+      "prezzo": 449.99,
+      "immagine": "./img/tablet.jpg",
+      "disponibilita": true
+    },
+    {
+      "nome": "Speaker Portatile",
+      "descrizione": "Suono potente, resistente all'acqua, perfetto per l'esterno.",
+      "prezzo": 79,
+      "immagine": "./img/speaker.jpg",
+      "disponibilita": true
+    },
+    {
+      "nome": "E-reader Paper",
+      "descrizione": "Schermo antiriflesso, leggero, batteria a lunga durata per la lettura.",
+      "prezzo": 119,
+      "immagine": "./img/ereader.jpg",
+      "disponibilita": true
+    },
+    {
+      "nome": "Tastiera Wireless",
+      "descrizione": "Connessione stabile, design ergonomico per una digitazione confortevole.",
+      "prezzo": 49.99,
+      "immagine": "./img/tastiera.jpg",
+      "disponibilita": true
+    },
+    {
+      "nome": "Mouse Ottico",
+      "descrizione": "Precisione elevata, design ergonomico, ideale per l'uso quotidiano.",
+      "prezzo": 25.5,
+      "immagine": "./img/mouse.jpg",
+      "disponibilita": true
+    },
+    {
+      "nome": "Power Bank 20000mAh",
+      "descrizione": "Batteria esterna ad alta capacità per ricaricare i tuoi dispositivi.",
+      "prezzo": 39.99,
+      "immagine": "./img/powerbank.jpg",
+      "disponibilita": true
+    }
+  ],
+  "carrello": [
+    {
+      "id": "0919",
+      "nome": "Smartphone Alpha",
+      "descrizione": "Display OLED, fotocamera 64MP, batteria a lunga durata.",
+      "prezzo": 599.99,
+      "immagine": "./img/smartphone.jpg",
+      "disponibilita": true
+    },
+    {
+      "id": "4d79",
+      "nome": "Cuffie Bluetooth X",
+      "descrizione": "Audio di alta qualità, comode da indossare, lunga autonomia.",
+      "prezzo": 129.5,
+      "immagine": "./img/cuffie.jpg",
+      "disponibilita": true
+    },
+    {
+      "id": "f5fb",
+      "nome": "Smartphone Alpha",
+      "descrizione": "Display OLED, fotocamera 64MP, batteria a lunga durata.",
+      "prezzo": 599.99,
+      "immagine": "./img/smartphone.jpg",
+      "disponibilita": true
+    }
+  ]
+}
