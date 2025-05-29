@@ -14,6 +14,11 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <style>
+            #arrayDiPartenzaTarget, #arrayShufflatoTarget, #mergeSortTarget, #quickSortTarget, #heapSortTarget {
+                max-height: 30vh;
+            }
+        </style>
     </head>
 
     <body>
@@ -24,13 +29,13 @@
                 <div class="card mt-2">
                     <div class="card-body">
                         <h4 class="card-title">Array di partenza</h4>
-                        <p class="card-text" id="arrayDiPartenzaTarget"></p>
+                        <p class="card-text overflow-scroll" id="arrayDiPartenzaTarget"></p>
                     </div>
                 </div>
                 <div class="card mt-2">
                     <div class="card-body">
                         <h4 class="card-title">Array shufflato (Fisher-Yates)</h4>
-                        <p class="card-text" id="arrayShufflatoTarget"></p>
+                        <p class="card-text overflow-scroll" id="arrayShufflatoTarget"></p>
                         <span id="executionTimeTargetShuffle"></span>
                         <button type="button" class="btn btn-info float-end" id="btnReshuffle">Reshuffle</button>
                     </div>
@@ -40,9 +45,11 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Merge Sort</h4>
-                                <p class="card-text" id="mergeSortTarget"></p>
+                                <p class="card-text overflow-scroll" id="mergeSortTarget"></p>
                                 <hr>
                                 <span id="executionTimeTargetMerge"></span>
+                                <hr>
+                                <span id="interazioniMerge"></span>
                             </div>
                         </div>
                     </div>
@@ -50,7 +57,11 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Quick Sort</h4>
-                                <p class="card-text" id="quickSortTarget"></p>
+                                <p class="card-text overflow-scroll" id="quickSortTarget"></p>
+                                <hr>
+                                <span id="executionTimeTargetQuick"></span>
+                                <hr>
+                                <span id="interazioniQuick"></span>
                             </div>
                         </div>
                     </div>
@@ -58,7 +69,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Heap Sort</h4>
-                                <p class="card-text" id="heapSortTarget"></p>
+                                <p class="card-text overflow-scroll" id="heapSortTarget"></p>
                             </div>
                         </div>
                     </div>
