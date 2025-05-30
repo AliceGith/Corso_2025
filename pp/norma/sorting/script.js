@@ -6,8 +6,11 @@ let quickSortTarget = document.querySelector("#quickSortTarget");
 let heapSortTarget = document.querySelector("#heapSortTarget");
 let executionTimeTargetMerge = document.querySelector("#executionTimeTargetMerge");
 let executionTimeTargetShuffle = document.querySelector("#executionTimeTargetShuffle");
+let executionTimeTargetHeap = document.querySelector("#executionTimeTargetHeap");
 let interazioniMerge = document.querySelector("#interazioniMerge");
 let interazioniQuick = document.querySelector("#interazioniQuick");
+let interazioniHeap = document.querySelector("#interazioniHeap");
+let btnConfronta = document.querySelector("#btnConfronta");
 
 let listaNumeri = [];
 // modificare il numero di elementi nell'array
@@ -23,9 +26,7 @@ function fisherYates(listaNumeri){
     let lunghezzaArray = numeriShuffled.length;
     for(let i = lunghezzaArray - 1; i >= 0; i--){
         let j = Math.floor(Math.random() * (i + 1));
-        let temp = numeriShuffled[i];
-        numeriShuffled[i] = numeriShuffled[j];
-        numeriShuffled[j] = temp;        
+        [numeriShuffled[i], numeriShuffled[j]] = [numeriShuffled[j], numeriShuffled[i]];
     }
     arrayShufflatoTarget.innerHTML = numeriShuffled.join(" ");    
     let endTime = performance.now();
@@ -35,6 +36,9 @@ function fisherYates(listaNumeri){
 
 let counterMerge = 0;
 let counterQuick = 0;
+let counterHeap = 0;
+
+// merge sort
 
 function mergeSort(array){    
     if(array.length <= 1){
@@ -89,6 +93,8 @@ function mergeSortStampa(numeriShuffled){
     executionTimeTargetMerge.innerHTML = `Tempo d'esecuzione: ${endTime-startTime} ms`; 
 }
 
+// quick sort
+
 function quickSort(array){
     if(array.length <= 1){
         return array;
@@ -117,20 +123,98 @@ function quickSortStampa(numeriShuffled){
     executionTimeTargetQuick.innerHTML = `Tempo d'esecuzione: ${endTime-startTime} ms`;
 }
 
+// heap sort
+
+function heapSwap(array, i, j){
+    [array[i], array[j]] = [array[j], array[i]];
+}
+
+function heapify(array, n, i){
+    let grande = i;
+    let figlioSinistra = (2 * i) + 1;
+    let figlioDestra = (2 * i) + 2;
+
+    if(figlioSinistra < n && array[figlioSinistra] > array[grande]){
+        counterHeap++;
+        grande = figlioSinistra;
+    }
+
+    if(figlioDestra < n &&  array[figlioDestra] > array[grande]){
+        counterHeap++;
+        grande = figlioDestra;
+    }
+
+    if(grande != i){
+        heapSwap(array, i, grande);
+        heapify(array, n, grande);
+    }
+}
+
+function heapSort(array){
+    let n = array.length;
+    let i = Math.floor(n/2) - 1;
+
+    while(i >= 0){
+        heapify(array, n, i);
+        i--;
+    }
+
+    let j = n - 1;
+
+    while(j > 0){
+        heapSwap(array, 0, j);
+        heapify(array, j, 0);
+        j--;
+    }
+
+    return array;
+}
+
+function heapSortStampa(numeriShuffled){
+    let startTime = performance.now();
+    let arrayHeapSort = heapSort([...numeriShuffled]);
+    heapSortTarget.innerHTML = arrayHeapSort.join(" ");
+    let endTime = performance.now();
+    // executionTimeTargetHeap.innerHTML = `Tempo d'esecuzione: ${endTime-startTime} ms`;
+    executionTimeTargetHeap.innerHTML = `Tempo d'esecuzione: ${executionTime(startTime, endTime)} ms`;
+}
+
+function executionTime(startTime, endTime){
+    tempo = endTime - startTime;
+    return tempo;
+}
+
+// eventi
+
 btnReshuffle.addEventListener("click", ()=>{
     let numeriShuffled = fisherYates(listaNumeri);
     counterMerge = 0;
     counterQuick = 0;
+    counterHeap = 0;
     mergeSortStampa(numeriShuffled);
     quickSortStampa(numeriShuffled);
+    heapSortStampa(numeriShuffled);
     interazioniMerge.innerHTML = "Numero di comparazioni: " + counterMerge;
     interazioniQuick.innerHTML = "Numero di comparazioni: " + counterQuick;
+    interazioniHeap.innerHTML = "Numero di comparazioni: " + counterHeap;
 });
 
 document.addEventListener("DOMContentLoaded", ()=>{
     let numeriShuffled = fisherYates(listaNumeri);
     mergeSortStampa(numeriShuffled);
     quickSortStampa(numeriShuffled);    
+    heapSortStampa(numeriShuffled);
     interazioniMerge.innerHTML = "Numero di comparazioni: " + counterMerge;
     interazioniQuick.innerHTML = "Numero di comparazioni: " + counterQuick;
+    interazioniHeap.innerHTML = "Numero di comparazioni: " + counterHeap;
 });
+
+btnConfronta.addEventListener("click", ()=>{
+    for(let i = 0; i < 10; i++){
+        // let numeriShuffled = fisherYates(listaNumeri);
+        // mergeSortStampa(numeriShuffled);
+        // quickSortStampa(numeriShuffled);    
+        // heapSortStampa(numeriShuffled);
+  
+    }
+})
