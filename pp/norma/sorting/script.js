@@ -4,13 +4,26 @@ let btnReshuffle = document.querySelector("#btnReshuffle");
 let mergeSortTarget = document.querySelector("#mergeSortTarget");
 let quickSortTarget = document.querySelector("#quickSortTarget");
 let heapSortTarget = document.querySelector("#heapSortTarget");
-let executionTimeTargetMerge = document.querySelector("#executionTimeTargetMerge");
-let executionTimeTargetShuffle = document.querySelector("#executionTimeTargetShuffle");
-let executionTimeTargetHeap = document.querySelector("#executionTimeTargetHeap");
+let executionTimeShuffleTarget = document.querySelector("#executionTimeShuffleTarget");
+let executionTimeMergeTarget = document.querySelector("#executionTimeMergeTarget");
+let executionTimeQuickTarget = document.querySelector("#executionTimeQuickTarget");
+let executionTimeHeapTarget = document.querySelector("#executionTimeHeapTarget");
 let interazioniMerge = document.querySelector("#interazioniMerge");
 let interazioniQuick = document.querySelector("#interazioniQuick");
 let interazioniHeap = document.querySelector("#interazioniHeap");
 let btnConfronta = document.querySelector("#btnConfronta");
+let confrontaTimeMergeLi = document.querySelector("#confrontaTimeMergeLi");
+let confrontaCounterMergeLi = document.querySelector("#confrontaCounterMergeLi");
+let confrontaTimeQuickLi = document.querySelector("#confrontaTimeQuickLi");
+let confrontaCounterQuickLi = document.querySelector("#confrontaCounterQuickLi");
+let confrontaTimeHeapLi = document.querySelector("#confrontaTimeHeapLi");
+let confrontaCounterHeapLi = document.querySelector("#confrontaCounterHeapLi");
+let confrontaTimeMergeMediaTarget = document.querySelector("#confrontaTimeMergeMediaTarget");
+let confrontaCounterMergeMediaTarget = document.querySelector("#confrontaCounterMergeMediaTarget");
+let confrontaTimeQuickMediaTarget = document.querySelector("#confrontaTimeQuickMediaTarget");
+let confrontaCounterQuickMediaTarget = document.querySelector("#confrontaCounterQuickMediaTarget");
+let confrontaTimeHeapMediaTarget = document.querySelector("#confrontaTimeHeapMediaTarget");
+let confrontaCounterHeapMediaTarget = document.querySelector("#confrontaCounterHeapMediaTarget");
 
 let listaNumeri = [];
 // modificare il numero di elementi nell'array
@@ -30,7 +43,7 @@ function fisherYates(listaNumeri){
     }
     arrayShufflatoTarget.innerHTML = numeriShuffled.join(" ");    
     let endTime = performance.now();
-    executionTimeTargetShuffle.innerHTML = `Tempo d'esecuzione: ${endTime-startTime} ms`; 
+    executionTimeShuffleTarget.innerHTML = `Tempo d'esecuzione: ${endTime-startTime} ms`; 
     return numeriShuffled;
 }
 
@@ -90,7 +103,7 @@ function mergeSortStampa(numeriShuffled){
     let arrayMergeSort = mergeSort([...numeriShuffled]);
     mergeSortTarget.innerHTML = arrayMergeSort.join(" ");
     let endTime = performance.now();
-    executionTimeTargetMerge.innerHTML = `Tempo d'esecuzione: ${endTime-startTime} ms`; 
+    executionTimeMergeTarget.innerHTML = `Tempo d'esecuzione: ${endTime-startTime} ms`; 
 }
 
 // quick sort
@@ -101,16 +114,18 @@ function quickSort(array){
     }
 
     const pivotIndex = Math.floor(array.length/2);
-    const pivot = array.splice(pivotIndex, 1)[0];
+    const pivot = array[pivotIndex];
+    const arraySenzaPivot = [...array.slice(0, pivotIndex), ...array.slice(pivotIndex + 1)];
 
-    const minori = array.filter(numero => {
+    const {minori, maggiori} = arraySenzaPivot.reduce((temp, numero) =>{
         counterQuick++;
-        return numero < pivot;
-    });
-    const maggiori = array.filter(numero => {
-        counterQuick++;
-        return numero >= pivot;
-    });
+        if(numero < pivot) {
+            temp.minori.push(numero);
+        }else{
+            temp.maggiori.push(numero);
+        }
+        return temp;
+    }, {minori: [], maggiori: []});
 
     return [...quickSort(minori), pivot, ...quickSort(maggiori)];
 }
@@ -120,7 +135,7 @@ function quickSortStampa(numeriShuffled){
     let arrayQuickSort = quickSort([...numeriShuffled]);
     quickSortTarget.innerHTML = arrayQuickSort.join(" ");
     let endTime = performance.now();
-    executionTimeTargetQuick.innerHTML = `Tempo d'esecuzione: ${endTime-startTime} ms`;
+    executionTimeQuickTarget.innerHTML = `Tempo d'esecuzione: ${endTime-startTime} ms`;
 }
 
 // heap sort
@@ -175,13 +190,7 @@ function heapSortStampa(numeriShuffled){
     let arrayHeapSort = heapSort([...numeriShuffled]);
     heapSortTarget.innerHTML = arrayHeapSort.join(" ");
     let endTime = performance.now();
-    // executionTimeTargetHeap.innerHTML = `Tempo d'esecuzione: ${endTime-startTime} ms`;
-    executionTimeTargetHeap.innerHTML = `Tempo d'esecuzione: ${executionTime(startTime, endTime)} ms`;
-}
-
-function executionTime(startTime, endTime){
-    tempo = endTime - startTime;
-    return tempo;
+    executionTimeHeapTarget.innerHTML = `Tempo d'esecuzione: ${endTime-startTime} ms`;
 }
 
 // eventi
@@ -210,11 +219,91 @@ document.addEventListener("DOMContentLoaded", ()=>{
 });
 
 btnConfronta.addEventListener("click", ()=>{
-    for(let i = 0; i < 10; i++){
-        // let numeriShuffled = fisherYates(listaNumeri);
-        // mergeSortStampa(numeriShuffled);
-        // quickSortStampa(numeriShuffled);    
-        // heapSortStampa(numeriShuffled);
-  
+
+    // modificare il numero di confronti
+    let numeroConfronti = 10;
+
+    confrontaTimeMergeLi.innerHTML = "";
+    confrontaCounterMergeLi.innerHTML = "";
+    confrontaTimeQuickLi.innerHTML = "";
+    confrontaCounterQuickLi.innerHTML = "";
+    confrontaTimeHeapLi.innerHTML = "";
+    confrontaCounterHeapLi.innerHTML = "";
+    confrontaTimeMergeMediaTarget.innerHTML = "";
+    confrontaCounterMergeMediaTarget.innerHTML = "";
+    confrontaTimeQuickMediaTarget.innerHTML = "";
+    confrontaCounterQuickMediaTarget.innerHTML = "";
+    confrontaTimeHeapMediaTarget.innerHTML = "";
+    confrontaCounterHeapMediaTarget.innerHTML = "";
+
+    let confrontaTimeMergeMedia = 0;
+    let confrontaCounterMergeMedia = 0;
+    let confrontaTimeQuickMedia = 0;
+    let confrontaCounterQuickMedia = 0;
+    let confrontaTimeHeapMedia = 0;
+    let confrontaCounterHeapMedia = 0;
+
+    for(let i = 0; i < numeroConfronti; i++){
+
+        let liTimeMerge = document.createElement("li");
+        let liCounterMerge = document.createElement("li");
+        let liTimeQuick = document.createElement("li");
+        let liCounterQuick = document.createElement("li");
+        let liTimeHeap = document.createElement("li");
+        let liCounterHeap = document.createElement("li");
+        let numeriShuffled = fisherYates(listaNumeri);
+
+        counterMerge = 0;
+        counterQuick = 0;
+        counterHeap = 0;
+
+        let startTime = performance.now();
+        let arrayMergeSort = mergeSort([...numeriShuffled]);
+        let endTime = performance.now();
+        let time = endTime-startTime;
+        liTimeMerge.textContent = time.toFixed(2) + "ms";
+        confrontaTimeMergeMedia += time;
+        confrontaCounterMergeMedia += counterMerge;
+        confrontaTimeMergeLi.appendChild(liTimeMerge);
+        liCounterMerge.textContent = counterMerge;
+        confrontaCounterMergeLi.appendChild(liCounterMerge);
+
+        startTime = performance.now();
+        let arrayQuickSort = quickSort([...numeriShuffled]);
+        endTime = performance.now();
+        time = endTime-startTime;
+        liTimeQuick.textContent = time.toFixed(2) + "ms";
+        confrontaTimeQuickMedia += time;
+        confrontaCounterQuickMedia += counterQuick;
+        confrontaTimeQuickLi.appendChild(liTimeQuick);
+        liCounterQuick.textContent = counterQuick;
+        confrontaCounterQuickLi.appendChild(liCounterQuick);
+
+        startTime = performance.now();
+        let arrayHeapSort = heapSort([...numeriShuffled]);
+        endTime = performance.now();
+        time = endTime-startTime;
+        liTimeHeap.textContent = time.toFixed(2) + "ms";
+        confrontaTimeHeapMedia += time;
+        confrontaCounterHeapMedia += counterHeap;
+        confrontaTimeHeapLi.appendChild(liTimeHeap);
+        liCounterHeap.textContent = counterHeap;
+        confrontaCounterHeapLi.appendChild(liCounterHeap);
+        
     }
+
+    confrontaTimeMergeMedia = confrontaTimeMergeMedia/numeroConfronti;
+    confrontaCounterMergeMedia = confrontaCounterMergeMedia/numeroConfronti;
+    confrontaTimeQuickMedia = confrontaTimeQuickMedia/numeroConfronti;
+    confrontaCounterQuickMedia = confrontaCounterQuickMedia/numeroConfronti;
+    confrontaTimeHeapMedia = confrontaTimeHeapMedia/numeroConfronti;
+    confrontaCounterHeapMedia = confrontaCounterHeapMedia/numeroConfronti;
+
+    confrontaTimeMergeMediaTarget.innerHTML = "Time: " + confrontaTimeMergeMedia.toFixed(2) + "ms";
+    confrontaCounterMergeMediaTarget.innerHTML = "Comparazioni: " + confrontaCounterMergeMedia;
+    confrontaTimeQuickMediaTarget.innerHTML = "Time: " + confrontaTimeQuickMedia.toFixed(2) + "ms";
+    confrontaCounterQuickMediaTarget.innerHTML = "Comparazioni: " + confrontaCounterQuickMedia;    
+    confrontaTimeHeapMediaTarget.innerHTML = "Time: " + confrontaTimeHeapMedia.toFixed(2) + "ms";
+    confrontaCounterHeapMediaTarget.innerHTML = "Comparazioni: " + confrontaCounterHeapMedia;    
+    
 })

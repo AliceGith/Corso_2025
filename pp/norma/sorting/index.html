@@ -15,8 +15,11 @@
             crossorigin="anonymous"
         />
         <style>
-            #arrayDiPartenzaTarget, #arrayShufflatoTarget, #mergeSortTarget, #quickSortTarget, #heapSortTarget {
+            #arrayDiPartenzaTarget, #arrayShufflatoTarget, #mergeSortTarget, #quickSortTarget, #heapSortTarget{
                 max-height: 30vh;
+            }
+            .confronto-wrapper{
+                max-height: 50vh;
             }
         </style>
     </head>
@@ -36,7 +39,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Array shufflato (Fisher-Yates)</h4>
                         <p class="card-text overflow-scroll" id="arrayShufflatoTarget"></p>
-                        <span id="executionTimeTargetShuffle"></span>
+                        <span id="executionTimeShuffleTarget"></span>
                         <button type="button" class="btn btn-info float-end" id="btnReshuffle">Reshuffle</button>
                     </div>
                 </div>
@@ -47,7 +50,7 @@
                                 <h4 class="card-title">Merge Sort</h4>
                                 <p class="card-text overflow-scroll" id="mergeSortTarget"></p>
                                 <hr>
-                                <span id="executionTimeTargetMerge"></span>
+                                <span id="executionTimeMergeTarget"></span>
                                 <hr>
                                 <span id="interazioniMerge"></span>
                             </div>
@@ -59,7 +62,7 @@
                                 <h4 class="card-title">Quick Sort</h4>
                                 <p class="card-text overflow-scroll" id="quickSortTarget"></p>
                                 <hr>
-                                <span id="executionTimeTargetQuick"></span>
+                                <span id="executionTimeQuickTarget"></span>
                                 <hr>
                                 <span id="interazioniQuick"></span>
                             </div>
@@ -71,14 +74,14 @@
                                 <h4 class="card-title">Heap Sort</h4>
                                 <p class="card-text overflow-scroll" id="heapSortTarget"></p>
                                 <hr>
-                                <span id="executionTimeTargetHeap"></span>
+                                <span id="executionTimeHeapTarget"></span>
                                 <hr>
                                 <span id="interazioniHeap"></span>
                             </div>
                         </div>
                     </div>
                 </div>
-                 <div class="card mt-2">
+                <div class="card mt-2 mb-3">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-6">
@@ -89,26 +92,62 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="row">
+                        <div class="row confronto-wrapper overflow-scroll">
                             <div class="col-4">
                                 <h5 class="card-title text-center">Merge</h5>
                                 <div class="row">
-                                    <div class="col-6">a</div>
-                                    <div class="col-6">b</div>
+                                    <div class="col-6">Time</div>
+                                    <div class="col-6">Comparazioni</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6" id="confrontaTimeMergeLi"></div>
+                                    <div class="col-6" id="confrontaCounterMergeLi"></div>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 border-start border-end border-dark">
                                 <h5 class="card-title text-center">Quick</h5>
                                 <div class="row">
-                                    <div class="col-6 border-start border-dark">c</div>
-                                    <div class="col-6 border-end border-dark">d</div>
+                                    <div class="col-6">Time</div>
+                                    <div class="col-6">Comparazioni</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6" id="confrontaTimeQuickLi"></div>
+                                    <div class="col-6" id="confrontaCounterQuickLi"></div>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <h5 class="card-title text-center">Heap</h5>
                                 <div class="row">
-                                    <div class="col-6">e</div>
-                                    <div class="col-6">f</div>
+                                    <div class="col-6">Time</div>
+                                    <div class="col-6">Comparazioni</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6" id="confrontaTimeHeapLi"></div>
+                                    <div class="col-6" id="confrontaCounterHeapLi"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <hr class="mt-3">
+                            <h4 class="card-title text-center">Media</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="row">
+                                    <div class="col-6" id="confrontaTimeMergeMediaTarget"></div>
+                                    <div class="col-6" id="confrontaCounterMergeMediaTarget"></div>
+                                </div>
+                            </div>
+                            <div class="col-4 border-start border-end border-dark">
+                                <div class="row">
+                                    <div class="col-6" id="confrontaTimeQuickMediaTarget"></div>
+                                    <div class="col-6" id="confrontaCounterQuickMediaTarget"></div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="row">
+                                    <div class="col-6" id="confrontaTimeHeapMediaTarget"></div>
+                                    <div class="col-6" id="confrontaCounterHeapMediaTarget"></div>
                                 </div>
                             </div>
                         </div>
