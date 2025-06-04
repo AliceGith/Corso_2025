@@ -298,12 +298,129 @@ btnEsercizio10.addEventListener("click", esercizio10);
 
 // esercizio 11
 
-// let array = []
-// let arraycheck = []
-// for(let i = 0; i < array; i++){
-//     foreach(arraycheck){
-//     if(element == array[i]){
-//         array.splice[i, 1];
-//     }
-//     }
-// }
+let targetEsercizio11 = document.querySelector("#targetEsercizio11");
+let targetEsercizio11Risolto = document.querySelector("#targetEsercizio11Risolto");
+let targetEsercizio11Duplicati = document.querySelector("#targetEsercizio11Duplicati");
+let btnEsercizio11 = document.querySelector("#btnEsercizio11");
+
+let arrayEsercizio11 = [];
+let arrayEsercizio11Risolto = [];
+let arrayEsercizio11Duplicati = [];
+
+for(let i = 0; i < 50; i++){
+    arrayEsercizio11.push(Math.floor(Math.random() * 25));
+}
+
+targetEsercizio11.innerHTML = "Array di partenza:<br>" + arrayEsercizio11.join(" ");
+
+arrayEsercizio11.forEach(numero =>{
+    if(!arrayEsercizio11Risolto.includes(numero)){        
+        arrayEsercizio11Risolto.push(numero);
+    }else{
+        arrayEsercizio11Duplicati.push(numero);        
+    }
+});
+
+targetEsercizio11Risolto.innerHTML = "Array risolto:<br>" + arrayEsercizio11Risolto.join(" ");
+targetEsercizio11Duplicati.innerHTML = "Duplicati:<br>" + arrayEsercizio11Duplicati.join(" ");
+
+btnEsercizio11.addEventListener("click", ()=>{
+    arrayEsercizio11 = [];
+    arrayEsercizio11Risolto = [];
+    arrayEsercizio11Duplicati = [];
+    for(let i = 0; i < 50; i++){
+        arrayEsercizio11.push(Math.floor(Math.random() * 25));
+    }
+    targetEsercizio11.innerHTML = "Array di partenza:<br>" + arrayEsercizio11.join(" ");
+    arrayEsercizio11.forEach(numero =>{
+        if(!arrayEsercizio11Risolto.includes(numero)){        
+            arrayEsercizio11Risolto.push(numero);
+        }else{
+            arrayEsercizio11Duplicati.push(numero);        
+        }
+    });
+    targetEsercizio11Risolto.innerHTML = "Array risolto:<br>" + arrayEsercizio11Risolto.join(" ");
+    targetEsercizio11Duplicati.innerHTML = "Duplicati:<br>" + arrayEsercizio11Duplicati.join(" ");
+});
+
+// esercizio 12
+
+let targetEsercizio12Uno = document.querySelector("#targetEsercizio12Uno");
+let targetEsercizio12Due = document.querySelector("#targetEsercizio12Due");
+let targetEsercizio12Risolto = document.querySelector("#targetEsercizio12Risolto");
+
+let array1 = [1, 0, 2, 4, 6];
+let array2 = [0, 4, 5, 8, 7];
+
+targetEsercizio12Uno.innerHTML = "Array uno:<br>" + array1.join(" ");
+targetEsercizio12Due.innerHTML = "Array due:<br>" + array2.join(" ");
+
+let arraySomma = [];
+
+for(let i = 0; i < array1.length; i++){
+    arraySomma[i] = array1[i] + array2[i];
+}
+
+targetEsercizio12Risolto.innerHTML = "Array Somma:<br>" + arraySomma.join(" ");
+
+// esercizio 13
+
+let targetEsercizio13Uno = document.querySelector("#targetEsercizio13Uno");
+let targetEsercizio13Due = document.querySelector("#targetEsercizio13Due");
+let targetEsercizio13Risolto = document.querySelector("#targetEsercizio13Risolto");
+let btnEsercizio13 = document.querySelector("#btnEsercizio13");
+
+let arrayEsercizio13Uno = [];
+let arrayEsercizio13Due = [];
+let arrayEsercizio13Risolto = [];
+
+for(let i = 0; i < 10; i++){
+    arrayEsercizio13Uno.push(Math.ceil(Math.random() * 10));
+    arrayEsercizio13Due.push(Math.ceil(Math.random() * 10));
+}
+
+targetEsercizio13Uno.innerHTML = "Array Uno:<br>" + arrayEsercizio13Uno.join(" ");
+targetEsercizio13Due.innerHTML = "Array Due:<br>" + arrayEsercizio13Due.join(" ");
+
+arrayEsercizio13Uno.forEach(numero => {
+    if(!arrayEsercizio13Due.includes(numero)){
+        arrayEsercizio13Risolto.push(numero);
+    }
+});
+arrayEsercizio13Due.forEach(numero => {
+    if(!arrayEsercizio13Uno.includes(numero)){
+        arrayEsercizio13Risolto.push(numero);
+    }
+});
+
+targetEsercizio13Risolto.innerHTML = "Array Risolto:<br>" + arrayEsercizio13Risolto.join(" ");
+
+btnEsercizio13.addEventListener("click", ()=>{
+    arrayEsercizio13Uno = [];
+    arrayEsercizio13Due = [];
+    arrayEsercizio13Risolto = [];
+
+    for(let i = 0; i < 10; i++){
+        arrayEsercizio13Uno.push(Math.ceil(Math.random() * 10));
+        arrayEsercizio13Due.push(Math.ceil(Math.random() * 10));
+    }
+
+    targetEsercizio13Uno.innerHTML = "Array Uno:<br>" + arrayEsercizio13Uno.join(" ");
+    targetEsercizio13Due.innerHTML = "Array Due:<br>" + arrayEsercizio13Due.join(" ");
+
+    arrayEsercizio13Uno.forEach(numero => {
+        if(!arrayEsercizio13Due.includes(numero)){
+            arrayEsercizio13Risolto.push(numero);
+        }
+    });
+    arrayEsercizio13Due.forEach(numero => {
+        if(!arrayEsercizio13Uno.includes(numero)){
+            arrayEsercizio13Risolto.push(numero);
+        }
+    });
+
+    targetEsercizio13Risolto.innerHTML = "Array Risolto:<br>" + arrayEsercizio13Risolto.join(" ");
+
+});
+
+// esercizio 14
