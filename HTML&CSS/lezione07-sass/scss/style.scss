@@ -1,0 +1,54 @@
+// importo i files parziali sass
+@import "variables";
+@import "mixins";
+
+// posso usare variabili
+// $primary: blue;
+// $secondary: gray;
+
+// operazioni con i colori
+
+// schiarire un colore
+.title {
+    background-color: lighten($primary, 25%); //questo restituisce il colore primary un po' più chiaro
+    color: darken($primary, 10%);
+}
+.title2 {
+    background-color: $primary;
+}
+.my-text {
+    background-color: transparentize($primary, 0.8);
+    color: desaturate($primary, 50%);
+}
+
+// selettori nidificati
+.main-menu {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+
+        li {
+            font-weight: bold;
+
+            a {
+                text-decoration: none;
+                color: $primary;
+
+                &.active-link {
+                    text-decoration: underline;
+                }
+
+                &:hover {
+                    color: darken($primary, 20%);
+                }
+            }
+        }
+    }
+}
+
+body {
+    @include linear-gradient(lightblue, pink);
+}
