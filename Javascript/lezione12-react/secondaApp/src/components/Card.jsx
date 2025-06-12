@@ -28,6 +28,10 @@
 // secondo modo di usare i props
 function Card({title, description, imgURL}){
 
+    if(title == undefined){
+        title = "Titolo default";
+    }
+
     return(
         <>
         <div className="card">
@@ -40,6 +44,7 @@ function Card({title, description, imgURL}){
                 <p>{description}</p>
             </div>
         </div>
+        
         </>
     )
 }
