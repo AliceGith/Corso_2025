@@ -1,9 +1,22 @@
 .logo {
-    width: 12vw;
+    width: 10rem;
+}
+
+.icona {
+    width: 4rem;
 }
 
 @media screen and (max-width: 600px) {
     .logo {
-        width: 20vw;
+        width: 7rem;
     }
+}
+/* 
+.card-wrapper {
+    overflow-x: scroll;
+    display: flex;
+} */
+
+.card {
+    margin: auto;
 }

@@ -1,0 +1,50 @@
+{
+    "wallpaper":[
+        {
+            "id": "w01",
+            "nome": "Celeste Wallpaper",
+            "descrizione": "Celeste Custom Wallpaper",
+            "prezzo": 7.99,
+            "immagine": "./img/celeste-wallpaper.png",
+            "disponibilita": true
+        },
+        {
+            "id": "w02",
+            "nome": "Hollow Knight Wallpaper",
+            "descrizione": "Hollow Knight Custom Wallpaper",
+            "prezzo": 7.99,
+            "immagine": "./img/hollow-wallpaper.jpg",
+            "disponibilita": true
+        }
+    ],
+    "musica":[
+        {
+            "id": "m01",
+            "nome": "Celeste Colonna Sonora",
+            "descrizione": "Colonna sonora di Celeste",
+            "prezzo": 4.99,
+            "immagine": "./img/celeste-musica.jpg",
+            "disponibilita": true
+        }
+    ],
+    "icone":[
+        {
+            "id": "i01",
+            "nome": "Celeste Icone",
+            "descrizione": "Icone ispirate a Celeste",
+            "prezzo": 2.99,
+            "immagine": "./img/celeste-icone.jpg",
+            "disponibilita": true
+        }
+    ],
+    "asset":[
+        {
+            "id": "a01",
+            "nome": "Celeste Asset",
+            "descrizione": "Asset ispirati a Celeste",
+            "prezzo": 4.99,
+            "immagine": "./img/celeste-asset.jpg",
+            "disponibilita": true
+        }
+    ]
+}
