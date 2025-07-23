@@ -1,29 +1,4 @@
-.logo {
-    width: 10rem;
-}
-
-.icona {
-    width: 4rem;
-}
-
-@media screen and (max-width: 600px) {
-    .logo {
-        width: 7rem;
-    }
-}
-
-.social {
-    width: 8rem;
-}
-
-.card {
-    margin: auto;
-}
-
-
-/*  */
-
-html,
+ html,
     body {
       position: relative;
       height: 100%;
