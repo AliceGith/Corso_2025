@@ -20,52 +20,157 @@
     margin: auto;
 }
 
-
-/*  */
-
 html,
-    body {
-      position: relative;
-      height: 100%;
-    }
+      body {
+        position: relative;
+        height: 100%;
+      }
 
-    body {
-      background: #000;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
+      body {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+      }
 
-    .swiper-container {
-      width: 100%;
-      height: 300px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
 
-    .swiper-slide {
-      background-size: cover;
-      background-position: center;
-    }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
 
-    .gallery-top {
-      height: 80%;
-      width: 100%;
-    }
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
 
-    .gallery-thumbs {
-      height: 20%;
-      box-sizing: border-box;
-      padding: 10px 0;
-    }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-    .gallery-thumbs .swiper-slide {
-      height: 100%;
-      opacity: 0.4;
-    }
+      .swiper {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-    .gallery-thumbs .swiper-slide-thumb-active {
-      opacity: 1;
-    }
+      .swiper-slide {
+        background-size: cover;
+        background-position: center;
+      }
+
+      .mySwiper2 {
+        height: 80%;
+        width: 100%;
+      }
+
+      .mySwiper {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+      }
+
+      .mySwiper .swiper-slide {
+        width: 25%;
+        height: 100%;
+        opacity: 0.4;
+      }
+
+      .mySwiper .swiper-slide-thumb-active {
+        opacity: 1;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+.slide-content-text {
+  background: linear-gradient(0deg, rgb(0, 0, 0) 1%, rgba(0, 0, 0, 0) 100%);
+  font-family: 'Caveat';
+  text-align: start;
+  font-weight: 700;
+  font-size: 3rem;
+  -webkit-text-stroke: 1px black;
+  color: violet;
+}
+
+.slide-content-text button {
+  font-family: 'Caveat';
+  font-weight: 700;
+  font-size: 2rem;
+  -webkit-text-stroke: 1px black;
+  color: violet;
+  border: 1px solid violet;
+  background-color: black;
+  /* padding-left: 2rem; */
+  /* padding-right: 2rem; */
+  /* padding: 0 0 0 0; */
+}
+
+@media screen and (max-width: 900px) {
+  .slide-content-text {
+    align-items: end;
+    font-size: 20px;
+    padding: 5px !important;
+    margin-bottom: -15px;
+}
+
+.slide-content-text button {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+}
+
+.slide-content-text button:hover,
+.slide-content-text button:focus {
+  color: violet !important;
+  background-color: black !important;
+  border-color: violet !important;
+  box-shadow: 0 0 10px rgba(238, 130, 238, 0.5);
+  -webkit-text-stroke: 1px black;
+}
+
+.slide-content-text button:active {
+  color: violet !important;
+  background-color: black !important;
+  border-color: violet !important;
+  -webkit-text-stroke: 1px black;
+}
+
+.prodotto-carrello {
+  /* border-top: 1px solid black; */
+  border-bottom: 1px solid white;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.prodotto-carrello button {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 2rem;
+  float: right;
+}

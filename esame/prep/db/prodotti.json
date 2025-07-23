@@ -1,50 +1,106 @@
 {
-    "wallpaper":[
-        {
-            "id": "w01",
-            "nome": "Celeste Wallpaper",
-            "descrizione": "Celeste Custom Wallpaper",
-            "prezzo": 7.99,
-            "immagine": "./img/celeste-wallpaper.png",
-            "disponibilita": true
-        },
-        {
-            "id": "w02",
-            "nome": "Hollow Knight Wallpaper",
-            "descrizione": "Hollow Knight Custom Wallpaper",
-            "prezzo": 7.99,
-            "immagine": "./img/hollow-wallpaper.jpg",
-            "disponibilita": true
-        }
-    ],
-    "musica":[
-        {
-            "id": "m01",
-            "nome": "Celeste Colonna Sonora",
-            "descrizione": "Colonna sonora di Celeste",
-            "prezzo": 4.99,
-            "immagine": "./img/celeste-musica.jpg",
-            "disponibilita": true
-        }
-    ],
-    "icone":[
-        {
-            "id": "i01",
-            "nome": "Celeste Icone",
-            "descrizione": "Icone ispirate a Celeste",
-            "prezzo": 2.99,
-            "immagine": "./img/celeste-icone.jpg",
-            "disponibilita": true
-        }
-    ],
-    "asset":[
-        {
-            "id": "a01",
-            "nome": "Celeste Asset",
-            "descrizione": "Asset ispirati a Celeste",
-            "prezzo": 4.99,
-            "immagine": "./img/celeste-asset.jpg",
-            "disponibilita": true
-        }
-    ]
+  "wallpaper": [
+    {
+      "id": "w01",
+      "nome": "Celeste Wallpaper",
+      "descrizione": "Celeste Custom Wallpaper",
+      "prezzo": 7.99,
+      "immagine": "./img/celeste-wallpaper.jpg",
+      "disponibilita": true
+    },
+    {
+      "id": "w02",
+      "nome": "Hollow Knight Wallpaper",
+      "descrizione": "Hollow Knight Custom Wallpaper",
+      "prezzo": 7.99,
+      "immagine": "./img/hollow-wallpaper.png",
+      "disponibilita": true
+    },
+    {
+      "id": "w03",
+      "nome": "Omori Wallpaper",
+      "descrizione": "Omori Custom Wallpaper",
+      "prezzo": 7.99,
+      "immagine": "./img/omori-wallpaper.png",
+      "disponibilita": true
+    },
+    {
+      "id": "w04",
+      "nome": "Undertale Wallpaper",
+      "descrizione": "Undertale Custom Wallpaper",
+      "prezzo": 7.99,
+      "immagine": "./img/undertale-wallpaper.png",
+      "disponibilita": true
+    },
+    {
+      "id": "w05",
+      "nome": "Tunic Wallpaper",
+      "descrizione": "Tunic Custom Wallpaper",
+      "prezzo": 7.99,
+      "immagine": "./img/tunic-wallpaper.jpg",
+      "disponibilita": true
+    },
+    {
+      "id": "w06",
+      "nome": "Outer Wilds Wallpaper",
+      "descrizione": "Outer Wilds Custom Wallpaper",
+      "prezzo": 7.99,
+      "immagine": "./img/outer-wallpaper.jpg",
+      "disponibilita": true
+    },
+    {
+      "id": "w07",
+      "nome": "Final Fantasy X Wallpaper",
+      "descrizione": "Final Fantasy X Custom Wallpaper",
+      "prezzo": 7.99,
+      "immagine": "./img/ffx-wallpaper.jpg",
+      "disponibilita": true
+    },
+    {
+      "id": "w08",
+      "nome": "Alice In Madness Wallpaper",
+      "descrizione": "Alice In Madness Custom Wallpaper",
+      "prezzo": 7.99,
+      "immagine": "./img/alice-wallpaper.jpg",
+      "disponibilita": true
+    }
+  ],
+  "musica": [
+    {
+      "id": "m01",
+      "nome": "Celeste Colonna Sonora",
+      "descrizione": "Colonna sonora di Celeste",
+      "prezzo": 4.99,
+      "immagine": "./img/celeste-musica.jpg",
+      "disponibilita": true
+    }
+  ],
+  "icone": [
+    {
+      "id": "i01",
+      "nome": "Celeste Icone",
+      "descrizione": "Icone ispirate a Celeste",
+      "prezzo": 2.99,
+      "immagine": "./img/celeste-icone.jpg",
+      "disponibilita": true
+    }
+  ],
+  "asset": [
+    {
+      "id": "a01",
+      "nome": "Celeste Asset",
+      "descrizione": "Asset ispirati a Celeste",
+      "prezzo": 4.99,
+      "immagine": "./img/celeste-asset.jpg",
+      "disponibilita": true
+    }
+  ],
+  "carrello": [
+    {
+      "id": "w01",
+      "nome": "Celeste Wallpaper",
+      "prezzo": 7.99,
+      "immagine": "./img/celeste-wallpaper.jpg"
+    }
+  ]
 }
