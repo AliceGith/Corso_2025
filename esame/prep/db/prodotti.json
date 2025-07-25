@@ -95,12 +95,5 @@
       "disponibilita": true
     }
   ],
-  "carrello": [
-    {
-      "id": "w01",
-      "nome": "Celeste Wallpaper",
-      "prezzo": 7.99,
-      "immagine": "./img/celeste-wallpaper.jpg"
-    }
-  ]
+  "carrello": []
 }

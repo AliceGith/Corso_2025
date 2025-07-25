@@ -165,12 +165,26 @@ html,
   border-bottom: 1px solid white;
   margin-top: 1rem;
   font-size: 2rem;
+  align-items: center;
+}
+
+.prodotto-carrello img {
+  width: 12rem;
+  height: auto;
 }
 
 .prodotto-carrello button {
   background: none;
   border: none;
   color: red;
+  font-size: 1.5rem;
+  /* float: right; */
+}
+
+.carrello-titolo {
+  margin-bottom: 0;
+}
+
+#cart-total {
   font-size: 2rem;
-  float: right;
 }
