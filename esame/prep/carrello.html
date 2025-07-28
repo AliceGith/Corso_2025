@@ -54,8 +54,49 @@
             <div id="carrello-wrapper">
                 <div id="cart-container"></div>
                 <div id="cart-total" class="text-end"></div>
-                <div id="cart-form"></div>
-                <div id="cart-buttons"></div>
+                <div id="cart-form">
+                    <form>
+                        <div class="row">
+                        <div class="mb-3 col-6">
+                            <label for="formNome" class="form-label">Nome:</label>
+                            <span id="formNomeCheck" class="float-end"></span>
+                            <input type="text" class="form-control" id="formNome" placeholder="Nome" required oninput="this.value = this.value.replace(/[^A-Za-z]/g, '')">
+                        </div>
+                        <div class="mb-3 col-6">
+                            <label for="formCitta" class="form-label">Città:</label>
+                            <span id="formCittaCheck" class="float-end"></span>
+                            <input type="text" class="form-control" id="formCitta" placeholder="Città" required oninput="this.value = this.value.replace(/[^A-Za-z]/g, '')">
+                        </div>
+                        </div>
+                        <div class="row"><div class="mb-3 col-6">
+                            <label for="formCognome" class="form-label">Cognome:</label>
+                            <span id="formCognomeCheck" class="float-end"></span>
+                            <input type="text" class="form-control" id="formCognome" placeholder="Cognome" required oninput="this.value = this.value.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ'\- ]/g, '')">
+                        </div>
+                        <div class="mb-3 col-6">
+                            <label for="formIndirizzo" class="form-label">Indirizzo:</label>
+                            <span id="formIndirizzoCheck" class="float-end"></span>
+                            <input type="text" class="form-control" id="formIndirizzo" placeholder="Indirizzo" required>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="mb-3 col-6">
+                            <label for="formEmail" class="form-label">Email:</label>
+                            <span id="formEmailCheck" class="float-end"></span>
+                            <input type="email" class="form-control" id="formEmail" placeholder="Email" required>
+                        </div>    
+                        <div class="mb-3 col-6">
+                            <label for="formCAP" class="form-label">CAP:</label>
+                            <span id="formCAPCheck" class="float-end"></span>
+                            <input type="number" class="form-control" id="formCAP" placeholder="CAP" required>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="cart-buttons" class="mb-3 mt-2 text-center">
+                    <button class="btn btn-primary me-2" id="btnForm">Paga</button>
+                    <button class="btn btn-danger ms-2" id="btnSvuotaCarrello">Svuota Carrello</button>
+                </div>
             </div>
         </div>
     </main>
