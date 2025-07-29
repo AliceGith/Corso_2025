@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOME SITO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img class="logo" src="./img/logo.png"></a>
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav float-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chisiamo.html">Chi Siamo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="torneieventi.html">Tornei & Eventi</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Shop
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="prodotti.html">Prodotti</a></li>
+                            <li><a class="dropdown-item" href="carrello.html">Carrello</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contatti.html">Contatti</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Prodotti</h1>
+
+            <div class="wallpaper mt-4">
+                <h2>Wallpaper</h2>
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                    <div class="swiper-wrapper" id="wallpaper"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper" id="wallpaper2"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper mt-3">
+                <div class="row">
+                    <div class="footer-info col-lg-4">
+                        <span class="fw-bold">NextLevel Gaming</span><br>
+                        <span>via Carlo Alberto, 22/A, Torino</span><br>
+                        <span>tel. 011 56 20 017</span><br>
+                        <span>email: nextlevel@gaming.it</span><br>
+                        <span>C.F. 80096340015</span>
+                    </div>
+                    <div class="footer-legal col-lg-4">
+                        <span><b>Info Legali</b></span><br>
+                        <span>Informativa Privacy</span><br>
+                        <span>Termini & Condizioni</span><br>
+                        <span>Politica sui Cookies</span><br>
+                        <span>© 2025 NextLevel Gaming. Tutti i diritti riservati.</span>
+                    </div>
+                    <div class="footer-social col-lg-4">
+                        <span><b>Social</b></span><br>
+                        <div class="social-wrapper d-flex d-lg-block justify-content-around">
+                            <a href=""><i class="bi bi-discord social"></i></a><br>
+                            <a href=""><i class="bi bi-instagram social"></i></a><br>
+                            <a href=""><i class="bi bi-twitch social"></i></a><br>
+                            <a href=""><i class="bi bi-whatsapp social"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/prodotti.js"></script>
+</body>
+
+</html>
